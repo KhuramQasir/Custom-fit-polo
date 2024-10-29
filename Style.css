@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0px;
     padding: 0px;
    
@@ -15,8 +15,8 @@ body{
      column-gap: 22px;
      width: 72%;
      
-     /* border: 1px solid black; */
-     /* padding: 20px 30px; */
+      border: 1px solid black; 
+     padding: 20px 30px;
 }
 
 
@@ -120,4 +120,253 @@ body{
   .size label {
     font-weight: bold;
   }
-  
+
+  .floating-btn{
+
+    position: fixed;
+    top: 450px;
+    right: 30px;
+  }
+  .floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+   */
+
+   /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+#product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Product Card */
+.maindiv {
+    width: 250px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.maindiv:hover {
+    transform: scale(1.05);
+}
+
+.mainimgdiv {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.mainimgdiv img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+.imgchange.active {
+    border-color: #007bff;
+}
+
+.firstimgdiv img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.innerdiv {
+    padding: 15px;
+}
+
+#brand {
+    font-size: 14px;
+    color: #555;
+}
+
+#title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+#description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.dis {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.org {
+    color: #dc3545;
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+.sizes {
+    margin: 10px 0;
+}
+
+.sizes label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#option button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+#option button.active, #option button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#bag {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#bag:hover {
+    background-color: #0056b3;
+}
+
+/* Add Product Form */
+#add-product-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 70px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    position: fixed;
+    top: 450px;
+    right: 30px;
+}
+
+#add-product-btn:hover {
+    background-color: #0056b3;
+}
+
+#product-form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#product-form input[type="text"],
+#product-form input[type="number"],
+#product-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#product-form input[type="file"] {
+    margin-bottom: 15px;
+}
+
+#sizes-container {
+    margin-top: 15px;
+}
+
+#sizes-container h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+#sizes-container div {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#size-list {
+    font-size: 14px;
+    color: #555;
+}
+
+#add-size-btn {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+}
+
+#add-size-btn:hover {
+    background-color: #5a6268;
+}
+
+#submit-product-btn {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#submit-product-btn:hover {
+    background-color: #0056b3;
+}
+
+
